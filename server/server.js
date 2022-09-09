@@ -29,7 +29,7 @@ app.use(cors());
 app.get("/api/users", async (req, res) => {
   try {
     const result = await pool.query("select * from users;");
-    res.send(result.rows);
+    res.send({ success: true, users: result.rows });
   } catch (err) {
     res.send("Error " + err);
   }
