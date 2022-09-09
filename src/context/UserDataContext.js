@@ -14,9 +14,6 @@ const UserDataProvider = ({ children }) => {
       console.log(err);
     }
   };
-    useEffect(() => {
-      getAllUsers();
-    }, []);
 
   const userContextData = { userData, getAllUsers };
   return (
