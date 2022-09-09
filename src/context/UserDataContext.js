@@ -7,17 +7,18 @@ const UserDataProvider = ({ children }) => {
   const [userData, setUserData] = useState([]);
   const getAllUsers = async () => {
     try {
-      const response = await axios.get(`${apiUrl}/api/users`);
+      const response = await axios.get(`${apiUrl}/users`);
       setUserData(response.data.users);
+      return response.data.users;
     } catch (err) {
       console.log(err);
     }
   };
-  useEffect(() => {
-    getAllUsers();
-  }, []);
+    useEffect(() => {
+      getAllUsers();
+    }, []);
 
-  const userContextData = { userData };
+  const userContextData = { userData, getAllUsers };
   return (
     <userDataContext.Provider value={userContextData}>
       {children}
