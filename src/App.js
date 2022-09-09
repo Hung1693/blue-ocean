@@ -1,14 +1,13 @@
-import { useContext, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import { TestAPI } from "./components/TestAPI";
 
-
 function App() {
-
-  
-  return <>
-    <TestAPI />
-  </>;
+  return (
+    <>
+      <TestAPI />
+    </>
+  );
 }
 
 export default App;

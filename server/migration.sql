@@ -11,5 +11,5 @@ INSERT INTO users
              password
            )
 VALUES      (
-             'Immanuelmouth',
-             '2994 Ena Bypass');
+             'blueocean-test',
+             'blueocean-test-password');
